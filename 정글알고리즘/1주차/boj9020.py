@@ -24,3 +24,32 @@ for i in range(n):
         if isPrime(j) and isPrime(test_case[i]-j):
             print(j, test_case[i]-j)
             break
+
+
+
+# 2번째 풀이
+# import math
+
+# t = int(input())
+
+# test_case = [int(input()) for _ in range(t)]
+
+# d = [False] * 10001
+
+# def isPrime(n):
+#     if n == 1:
+#         return False
+#     for i in range(2, int(math.sqrt(n))+1):
+#         if n % i == 0:
+#             return False
+#     return True
+
+# for i in range(10001):
+#     if isPrime(i):
+#         d[i] = True
+
+# for case in test_case:
+#     for i in range(int(case/2), 0, -1):
+#         if d[i] and d[case-i]:
+#             print(i, case-i)
+#             break

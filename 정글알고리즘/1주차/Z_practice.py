@@ -9,6 +9,7 @@ def recursive(size, x, y):
     global count
     if x == r and y == c:
         print(count)
+        return
 
     if size == 1:
         count += 1
