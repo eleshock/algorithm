@@ -4,6 +4,9 @@ input = sys.stdin.readline
 
 a, b, c = map(int, input().split())
 
+
+#지수 법칙 a**(m+n) = (a**m)*(a**n)
+#나머지 분배 법칙 (a*b)%c = (a%c)*(b%c)%c
 def division(a, b, c):
     if b == 1:
         return a % c
