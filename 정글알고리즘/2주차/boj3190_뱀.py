@@ -45,8 +45,6 @@ def boundary_check(x, y):
         return True
     return False
 
-breaker = False
-
 while True:
     count += 1
     nx = x + dx[d]
@@ -60,7 +58,6 @@ while True:
 
     if boundary_check(nx, ny):              # 범위체크를 한 번 하고
         if [nx, ny] in snake:               # 몸에 부딪히면 break
-            breaker = True
             break
 
         if field[nx][ny] == 1:              # 방문한 곳에 사과가 있으면 길이 1 증가
@@ -72,8 +69,7 @@ while True:
             
         x, y = nx, ny
 
-    else:                                   # 범위 밖이면 break
-        breaker = True                                   
+    else:                                   # 범위 밖이면 break                             
         break
 
 print(count)
