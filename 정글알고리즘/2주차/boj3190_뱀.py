@@ -12,7 +12,6 @@ for _ in range(k):                              # 사과를 field에 1로 표시
     field[r-1][c-1] = 1                         # 0, 0을 기준점으로 하기 때문에 1씩 빼준다
 
 l = int(input())
-
 change = dict()
 for _ in range(l):
     x, c = input().split()
