@@ -6,6 +6,7 @@ words = [input().rstrip() for _ in range(n)]
 setWords = list(set(words))
 setWords.sort()
 
+
 arr = [[] for _ in range(51)]
 for word in setWords:
     for i in range(len(arr)):
