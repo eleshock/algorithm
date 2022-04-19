@@ -33,10 +33,11 @@ while queue:
             if box[nf][nx][ny] == 0:
                 box[nf][nx][ny] = 1
                 queue.append((nf, nx, ny, ndays))
-
+                
 # 익지 않은 토마토가 있을 경우 결과값 -1로 변경
 for i in range(h):
     for j in range(n):
+        # box[i][j]는 각 줄의 토마토 m개입짜리 리스트임
         if box[i][j].count(0) > 0:
             days = -1
             break

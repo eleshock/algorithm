@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**9)
 input = sys.stdin.readline
 
 def postOrder(left,right):
@@ -11,7 +11,7 @@ def postOrder(left,right):
     div = left + 1 #루트노드 다음 인덱스(1번)를 div로 초기화
 
     # left와 right를 나누기 위한 div값 구하기
-    while div <= right: #div를 1씩 증가시켜 right까지 가는 동안
+    while div <= right: #div를 right(끝값)까지 1씩 증가시키며 // 참고)right라는 제한을 안두고 True로 하면 오른쪽 서브트리가 없을 경우 div가 계속 증가하기 때문에 right라는 제한 필요
         if preOrder[div] > root: # 루트보다 큰 값이 나오면 break
             break
         div += 1
@@ -24,6 +24,7 @@ def postOrder(left,right):
     print(root)
 
 #입력받을 원소 리스트
+# 몇 개를 받을지 주어지지 않기 때문에 for문 사용불가
 preOrder =[]
 while True:
     try:
