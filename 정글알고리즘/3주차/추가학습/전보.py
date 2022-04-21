@@ -1,14 +1,3 @@
-'''
-입력
-3 2 1
-1 2 4
-1 3 2
-
-출력 - 시작노드에서 보낸 메시지를 받는 노드의 개수와 총 걸리는 시간(가장 멀리 떨어진 곳까지의 비용)
-2 4
-'''
-
- 
 import heapq
 import sys
 input = sys.stdin.readline
@@ -55,3 +44,14 @@ for d in distance:
         max_distance = max(max_distance, d)
 
 print(count - 1, max_distance)
+
+
+'''
+입력
+3 2 1
+1 2 4
+1 3 2
+
+출력 - 시작노드에서 보낸 메시지를 받는 노드의 개수와 총 걸리는 시간(가장 멀리 떨어진 곳까지의 비용)
+2 4
+'''
