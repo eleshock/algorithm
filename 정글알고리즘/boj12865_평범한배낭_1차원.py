@@ -11,4 +11,4 @@ for weight, value in items:
 
 print(dp[k])
 
-# 배낭에는 같은 물건을 중복으로 담을 수 없음
+# 배낭에는 같은 물건을 중복으로 담을 수 없기 때문에 range를 거꾸로 순회해야 함
